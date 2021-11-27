@@ -17,7 +17,15 @@
 
 	function addAdmin($admin){
 		$con = getConnection();
-		$sql= "insert into admin values('','{$admin['username']}', '{$admin['password']}', '{$admin['email']}', '{$admin['dob']}', '{$admin['gender']}')";
+		$sql= "insert into admin values(
+		                                   '',
+		                                   '{$admin['username']}', 
+		                                   '{$admin['password']}', 
+		                                   '{$admin['email']}', 
+		                                   '{$admin['dob']}', 
+		                                   '{$admin['gender']}',
+		                                   '{$admin['type']}'
+		                               )";
 		
 		if(mysqli_query($con, $sql)){
 			return true;
