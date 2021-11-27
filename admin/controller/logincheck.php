@@ -23,8 +23,8 @@
 
              
 
-                           //setcookie('loggedInName',$username,time()+3600,'/');
-						  // setcookie('loggedInId',$password,time()+3600,'/');
+                           setcookie('loggedInName',$username,time()+3600,'/');
+						   setcookie('loggedInId',$password,time()+3600,'/');
 					       //setcookie('loggedInEmail',$email,time()+3600,'/');
 				           //setcookie('loggedInDateOfBirth',$dob,time()+3600,'/');
 				           //setcookie('loggedInGender',$gender,time()+3600,'/');
