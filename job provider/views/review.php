@@ -39,12 +39,13 @@ textarea {
       <a href="../views/home.php">Back |</a>
       <a href="../controller/logout.php">Logout</a>
       <table>
+    
         <tr>
           <td>Officer Email</td>
           <td><input type="text" name="email" value=""></td>
         </tr>
 
-        <tr>
+         <tr>
           <td>Officer Name</td>
           <td><input type="text" name="name" value=""></td>
         </tr>
