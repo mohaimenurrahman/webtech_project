@@ -16,8 +16,16 @@
 		return $result;
 	}
 
-	
 
-	
+	function deleteReviews($id){
+		$con = getConnection();
+		$sql= "delete from reviews where id={$id}";
+		
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}	
 
 ?>

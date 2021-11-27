@@ -40,7 +40,7 @@
             <td><?=$data['mane']?></td>
             <td><?=$data['description']?></td>
             <td>
-                <a href="../controller/deletejob.php?id=<?=$data['id']?>"> DELETE</a> 
+                <a href="../controller/reviewdelete.php?id=<?=$data['id']?>"> DELETE</a> 
             </td>
         </tr>
     <?php 
