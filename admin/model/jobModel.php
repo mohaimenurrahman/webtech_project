@@ -16,6 +16,17 @@
 		return $result;
 	}
 
+	function deleteJob($id){
+		$con = getConnection();
+		$sql= "delete from job where id={$id}";
+		
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	
 
 ?>
