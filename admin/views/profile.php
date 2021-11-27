@@ -3,7 +3,7 @@
 	//$id = $_REQUEST['id'];
 	//$admin = getAdminsById($id);
 	$username = $_COOKIE['loggedInName'];
-	//$result = getAdminsByUsername($username);
+	//$result = getAdminsByUserName($username);
 
 ?>         
             <table align="center">

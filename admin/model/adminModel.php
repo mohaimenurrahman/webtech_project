@@ -46,8 +46,8 @@
 		$con = getConnection();
 		$sql= "select * from admin where username={$username}";
 		$result = mysqli_query($con, $sql);
-		$admin = mysqli_fetch_assoc($result);
-		return $admin;
+		$user = mysqli_fetch_assoc($result);
+		return $user;
 	}
 
 	function getAllAdmins(){
@@ -55,6 +55,18 @@
 		$sql= "select * from admin";
 		$result = mysqli_query($con, $sql);
 		return $result;
+	}
+
+
+	function passwordChange($user){
+		$con = getConnection();
+		$sql= "update admin set password='{$user['password']}' where username={$user['username']}";
+		
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	
