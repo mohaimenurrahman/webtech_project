@@ -42,14 +42,13 @@
 		return $user;
 	}
 
-	function getAdminsByUsername($username){
+	function getAdminsByUserName($username){
 		$con = getConnection();
 		$sql= "select * from admin where username={$username}";
 		$result = mysqli_query($con, $sql);
-		$user = mysqli_fetch_assoc($result);
-		return $user;
+		$admin = mysqli_fetch_assoc($result);
+		return $admin;
 	}
-
 
 	function getAllAdmins(){
 		$con = getConnection();

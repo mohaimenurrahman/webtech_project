@@ -30,12 +30,14 @@
 				            	        'type'=>$type, 
 				            	     ];
 
-						            setcookie('loggedInName',$username,time()+3600,'/');
+                                    
+                                     setcookie('loggedInName',$username,time()+3600,'/');
 						            setcookie('loggedInId',$password,time()+3600,'/');
-						            setcookie('loggedInEmail',$email,time()+3600,'/');
-						            setcookie('loggedInDateOfBirth',$dob,time()+3600,'/');
-						            setcookie('loggedInGender',$gender,time()+3600,'/');
-						            setcookie('loggedInType',$type,time()+3600,'/');     
+					                  setcookie('loggedInEmail',$email,time()+3600,'/');
+				                      setcookie('loggedInDateOfBirth',$dob,time()+3600,'/');
+				                    setcookie('loggedInGender',$gender,time()+3600,'/');
+				                    setcookie('loggedInType',$type,time()+3600,'/'); 
+
 
 				                    $status = addAdmin($admin);	
 				                    if($status){
@@ -66,12 +68,6 @@
 				            	        'dob'=>$dob, 
 				            	        'gender'=>$gender, 
 				            	     ];
-
-						    setcookie('loggedInName',$username,time()+3600,'/');
-						    setcookie('loggedInId',$password,time()+3600,'/');
-						    setcookie('loggedInEmail',$email,time()+3600,'/');
-						    setcookie('loggedInDateOfBirth',$dob,time()+3600,'/');
-						    setcookie('loggedInGender',$gender,time()+3600,'/');     
 
 				            $status = addAdmin($admin);	
 				            if($status){

@@ -8,6 +8,8 @@
 		$password = $_POST['password'];
 		$type = $_POST['type'];
 
+		//$admin = getAdminsByUserName($username);
+
 
 		if($username != ""){
 			if($password != ""){
@@ -18,6 +20,16 @@
 				           setcookie('flag', 'true', time()+3600, '/');
 				           //setcookie('loggedInName',$username,time()+3600,'/');
                            //setcookie('loggedInId',$username,time()+3600,'/');
+
+             
+
+                           //setcookie('loggedInName',$username,time()+3600,'/');
+						  // setcookie('loggedInId',$password,time()+3600,'/');
+					       //setcookie('loggedInEmail',$email,time()+3600,'/');
+				           //setcookie('loggedInDateOfBirth',$dob,time()+3600,'/');
+				           //setcookie('loggedInGender',$gender,time()+3600,'/');
+				           //setcookie('loggedInType',$type,time()+3600,'/'); 
+
 				           header('location: ../views/home.php');
 
 				        }else if($_POST['type'] == "placementOfficer"){
