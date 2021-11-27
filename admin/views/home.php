@@ -33,6 +33,7 @@
 	
 	<table align="center">
 	    <tr> <td> <a href="joblist.php"> Posted Jobs</a> </td> </tr>
+	    <tr> <td> <a href="reviewlist.php"> Review Pannel</a> </td> </tr>
 	    <tr> <td> <a href="adminlist.php"> Admin Pannel</a> </td> </tr>
 	    <tr> <td> <a href="company.php"> Company</a> </td> </tr>
 	    <tr> <td> <a href="jobprovider.php"> Job Providers</a> </td> </tr>
