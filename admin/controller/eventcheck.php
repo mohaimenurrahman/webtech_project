@@ -8,34 +8,33 @@
 		$date	= $_POST['date'];
 		$description = $_POST['description'];
 
-		if($_POST['name'] != ){
-			if($_POST['date'] != ){
-				if($_POST['description'] != ){
+		if($_POST['name'] != ""){
+			if($_POST['date'] != ""){
+				if($_POST['description'] != ""){
 
 
 					$user = [
-								'name'= $name, 
-								'date'=$date, 
-								'description'= $description
+								'name'=> $name, 
+								'date'=>$date, 
+								'description'=> $description
 								
 							];
 							
 					$status = addUser($user);
 
 					if($status){
-						header('location ..viewseventlist.php');
+						header('location: ../views/eventlist.php');
 					}else{
-						echo try again...;
+						echo "try again...";
 					}
-					
-
 				}else{
-					echo Invalid date...;
+					echo "Invalid date...";
 				}	
 			}else{
-				echo Invalid name...;
+				echo "Invalid name...";
 			}
 		}else{
-			echo Invalid description...;
+			echo "Invalid description...";
 		}
 	}
+?>

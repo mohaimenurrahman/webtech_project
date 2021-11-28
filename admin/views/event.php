@@ -31,7 +31,7 @@
        
                       <tr>
                           <td>Description</td>
-                          <td><textarea id="text" name="description" rows="10" cols="50"></textarea></td>
+                          <td><textarea id="text" name="description"></textarea></td>
                       </tr>
 
                       <tr>
