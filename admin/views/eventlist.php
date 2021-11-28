@@ -9,6 +9,17 @@
 <head>
 	<title>Event List</title>
 <body>	
+
+     <center>
+            <a href="../views/home.php">Back |</a>
+            <a href="../views/home.php">Home |</a>
+            <a href="../controller/logout.php">Logout</a>
+     </center>
+     
+     <br>
+     <br>
+     <br>
+
 		<table border="1" align="center">
 		<tr align="center">
 			<th>Event Name</th>
