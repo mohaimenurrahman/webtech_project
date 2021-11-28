@@ -15,6 +15,9 @@
 	//print_r($user);
 
 
+	//<img src="../asset/upload/<?=$_SESSION['profile'] 
+
+
 ?>         
             <table align="center">
 	            <tr> 
@@ -38,8 +41,8 @@
                <tr>
                     <td>NAME</td>
                     <td><?php echo $_COOKIE['loggedInName'] ?></td>
-				    <td rowspan="6">
-						<img src="../asset/upload/<?=$_SESSION['profile']?>" width="100px" height="100px">
+				    <td rowspan="5">
+				    	<img src="a2.jpg" height="150" width="150"/>	
 				    </td>
                </tr>
                
@@ -63,17 +66,8 @@
                     <td><?php echo $user['type'] ?></td>
                 </tr>
 				
-               
-			    <tr>
-                   <td colspan="2"><a href="changepassword.php">Change Password</a></td>
-                </tr>
-			   
-			    <tr>
-                    <td colspan="2"><a href="changeprofilepicture.html">Change Profile Picture</a></td>
-                </tr>
-				
 				<tr align="center">
-                   <td colspan="3"><a href="edit.php">Edit Profile</a></td>
+                   <td colspan="3"><a href="editprofile.php">Edit Profile</a></td>
                 </tr>
 			   
            </table>
