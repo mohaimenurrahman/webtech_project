@@ -35,7 +35,7 @@
 			<td><?=$user['username']?></td>
 			<td><?=$user['email']?></td>
 			<td>
-				<a href="delete.php?id=<?=$user['id']?>"> DELETE</a> 
+				<a href="jobproviderdelete.php?id=<?=$user['id']?>"> DELETE</a> 
 			</td>
 		</tr>
 	<?php } ?>
