@@ -67,7 +67,7 @@
                 </tr>
 				
 				<tr align="center">
-                   <td colspan="3"><a href="editprofile.php">Edit Profile</a></td>
+                   <td colspan="3"><a href="editProfile.php">Edit Profile</a></td>
                 </tr>
 			   
            </table>

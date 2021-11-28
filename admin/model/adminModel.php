@@ -21,9 +21,9 @@
 		                                   '',
 		                                   '{$admin['username']}', 
 		                                   '{$admin['password']}', 
-		                                   '{$admin['email']}', 
-		                                   '{$admin['dob']}', 
+		                                   '{$admin['email']}',  
 		                                   '{$admin['gender']}',
+		                                   '{$admin['dob']}',
 		                                   '{$admin['type']}'
 		                               )";
 		
@@ -56,6 +56,22 @@
 		$sql= "select * from admin";
 		$result = mysqli_query($con, $sql);
 		return $result;
+	}
+
+
+	function editAdmin($user){
+		$con = getConnection();
+		$sql= "update admin set username='{$user['username']}', 
+		                      email='{$user['email']}' , 
+		                      dateofbirth='{$user['dateofbirth']}' , 
+		                      gender='{$user['gender']}' 
+		                      where id={$user['id']}";
+		
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 
