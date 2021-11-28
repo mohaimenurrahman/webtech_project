@@ -5,6 +5,16 @@
 	$username = $_COOKIE['loggedInName'];
 	//$result = getAdminsByUserName($username);
 
+
+    $con = mysqli_connect('localhost', 'root', '', 'webtech');
+	$sql= "SELECT * FROM `admin` WHERE `username` = '$username'";
+	$result = mysqli_query($con, $sql);
+	$user = mysqli_fetch_assoc($result);
+
+	//print_r($result);
+	//print_r($user);
+
+
 ?>         
             <table align="center">
 	            <tr> 
@@ -35,17 +45,22 @@
                
 			    <tr>
                     <td>Email</td>
-                   <td><?php echo $_COOKIE['loggedInEmail'] ?></td>
+                   <td><?php echo $user['email'] ?></td>
                 </tr>
 				
-				<tr>
-                    <td>Id</td>
-                    <td><?php echo $_COOKIE['loggedInId'] ?></td>
-                </tr>
-			   
 			    <tr>
                     <td>Date Of Birth</td>
-                    <td><?php echo $_COOKIE['loggedInDOB'] ?></td>
+                    <td><?php echo $user['gender'] ?></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td><?php echo $user['dateofbirth'] ?></td>
+                </tr>
+
+                <tr>
+                    <td>Type</td>
+                    <td><?php echo $user['type'] ?></td>
                 </tr>
 				
                
