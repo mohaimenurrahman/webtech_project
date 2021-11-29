@@ -1,5 +1,6 @@
 <?php 
 
+    require_once('header.php');
 	require_once('../model/jobProviderModel.php');
 	
 ?>
@@ -12,8 +13,8 @@
 <body>
 
 	 <center style="background-color:#FF99FF">
-            <a href="../views/home.php">Back |</a>
-            <a href="../views/home.php">Home |</a>
+            <a href="home.php">Back |</a>
+            <a href="home.php">Home |</a>
             <a href="../controller/logout.php">Logout</a>
      </center>
 
