@@ -110,9 +110,10 @@ tr:hover {background-color: yellow;}
 
       <div class="topnav">
             <a class="active" href="../views/home.php">HOME</a>
-            <a href="../views/userlist.php">JOB SEEKERS</a>
+            <a href="../views/seekerslist.php">JOB SEEKERS</a>
             <a href="../views/companyprofile.php">COMPANY</a>
             <a href="../views/joblist.php">JOB</a>
+            <a href="../views/hirelist.php">HIRE</a>
             <a href="../views/reviewlist.php">REVIEW</a>
             <a href="../views/eventlist.php">EVENT</a>
             <a href="../controller/logout.php">LOGOUT</a>

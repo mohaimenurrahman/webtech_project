@@ -113,9 +113,10 @@ h3 {
 
       <div class="topnav">
             <a class="active" href="../views/home.php">HOME</a>
-            <a href="../views/userlist.php">JOB SEEKERS</a>
+            <a href="../views/seekerslist.php">JOB SEEKERS</a>
             <a href="../views/companyprofile.php">COMPANY</a>
             <a href="../views/joblist.php">JOB</a>
+            <a href="../views/hirelist.php">HIRE</a>
             <a href="../views/reviewlist.php">REVIEW</a>
             <a href="../views/eventlist.php">EVENT</a>
             <a href="../controller/logout.php">LOGOUT</a>
@@ -150,7 +151,7 @@ h3 {
 			<table border="1" align="center">
 		<tr align="center" style="background-color:#1abc9c " >
 			<th>ID</th>
-			<th>NAME</th>
+			<th>COMPANY NAME</th>
 			<th>ADDRESS</th>
 			<th>EMAIL</th>
 			<th>ACTION</th>

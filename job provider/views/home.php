@@ -70,14 +70,15 @@ h3 {
 
       <div class="topnav">
             <a class="active" href="../views/home.php">HOME</a>
-            <a href="../views/userlist.php">JOB SEEKERS</a>
+            <a href="../views/seekerslist.php">JOB SEEKERS</a>
             <a href="../views/companyprofile.php">COMPANY</a>
             <a href="../views/joblist.php">JOB</a>
+            <a href="../views/hirelist.php">HIRE</a>
             <a href="../views/reviewlist.php">REVIEW</a>
             <a href="../views/eventlist.php">EVENT</a>
             <a href="../controller/logout.php">LOGOUT</a>
       </div>
-      <img src="../picture/home.png" width="100%" height="100%">
+      <img src="../asset/home.png" width="100%" height="100%">
       <br>
       <br><br>
       <a class="active" href="../views/home.php"><i class="glyphicon glyphicon-user"style="font-size:18px;"></i></a>

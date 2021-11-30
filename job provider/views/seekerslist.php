@@ -1,6 +1,6 @@
 <?php 
 
-	require_once('../model/jobModel.php');
+	require_once('../model/seekersModel.php');
 	
 ?>
 
@@ -9,7 +9,7 @@
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta charset="utf-8">
-	<title>Job List</title>
+	<title>Job Seekers List</title>
 	<style>
 
 a {
@@ -37,6 +37,9 @@ a:hover {
   border-radius: 50%;
 }
 
+
+	tr:hover {background-color: yellow;}
+
 	.button {
   background-color: #4CAF50;
   border: 10;
@@ -50,8 +53,6 @@ a:hover {
   cursor: pointer;
    float: right;
 }
-
-
 
 h3 {
   background-color: black;
@@ -95,22 +96,24 @@ h3 {
   color: white;
 }
 
-tr:hover {background-color: yellow;}
+
 </style>
+
 </head>
 <body>
 
 	<div style="text-align:center;">
-	<form method="post" action="../controller/jobcheck.php">
+	<form method="post" action="../controller/seekerscheck.php">
 		<fieldset>
+
 			<div class="header">
-      <h1>"JOB"</h1>
-     
+      <h1>"Job Seekers list"</h1>
+      
       </div>
 
       <div class="topnav">
             <a class="active" href="../views/home.php">HOME</a>
-             <a href="../views/seekerslist.php">JOB SEEKERS</a>
+            <a href="../views/seekerslist.php">JOB SEEKERS</a>
             <a href="../views/companyprofile.php">COMPANY</a>
             <a href="../views/joblist.php">JOB</a>
             <a href="../views/hirelist.php">HIRE</a>
@@ -119,11 +122,16 @@ tr:hover {background-color: yellow;}
             <a href="../controller/logout.php">LOGOUT</a>
       </div>
 
-			<div align="right" >
-      <a href="../views/companyprofile.php" class="previous round">&#8249;</a>
-      <a href="../views/reviewlist.php" class="next round">&#8250;</a>
-      <a href="../views/joblist.php"><i class="fa fa-refresh" style="font-size:20px"></i></a>
+			
+      <div align="right" >
+      <a href="../views/home.php" class="previous round">&#8249;</a>
+      <a href="../views/joblist.php" class="next round">&#8250;</a>
+      <a href="../views/seekerslist.php"><i class="fa fa-refresh" style="font-size:20px"></i></a>
       </div>
+
+      <br>
+      <br>
+      <br>
 
       <div align="center" >
       <input type="text" id="name" name="name" value="" onkeyup="ajax()" />
@@ -133,19 +141,15 @@ tr:hover {background-color: yellow;}
 
 		
 	    </div>
-	    <script type="text/javascript" src="jobscript.js"></script>
+	    <script type="text/javascript" src="seekersscript2.js"></script>
 
-
-
-
-
+			
 			<table border="1" align="center">
 		<tr align="center" style="background-color:#1abc9c " >
 			<th>ID</th>
-			<th>COMPANY NAME</th>
-			<th>JOB TITLE</th>
-			<th>SALARY</th>
-			<th>APPLY LAST DATE</th>
+			<th>NAME</th>
+			<th>ADDRESS</th>
+			<th>EMAIL</th>
 			<th>ACTION</th>
 		</tr>
 
@@ -153,33 +157,37 @@ tr:hover {background-color: yellow;}
 		$result = getAllUsers();
 		while ($user = mysqli_fetch_assoc($result)) { 
 	?>
-		<tr>
+		<tr align="center" style="background-color:#FFFFFF " >
 			<td><?=$user['id']?></td>
-			<td><?=$user['company_name']?></td>
-			<td><?=$user['job_title']?></td>
-			<td><?=$user['salary']?></td>
-			<td><?=$user['date']?></td>
+			<td><?=$user['name']?></td>
+			<td><?=$user['address']?></td>
+			<td><?=$user['email']?></td>
 			<td>
-				<a href="../views/addjob.php"> ADD</a> | 
-				<a href="editjob.php?id=<?=$user['id']?>"> EDIT</a> | 
-				<a href="deletejob.php?id=<?=$user['id']?>"> DELETE</a> 
+				<a href="../views/addseekers.html"> ADD</a> |
+				<a href="editseekers.php?id=<?=$user['id']?>"> EDIT</a> | 
+				<a href="deleteseekers.php?id=<?=$user['id']?>"> DELETE</a> |
+				<a href="../views/hire.html"> HIRE</a>
+				
 			</td>
 		</tr>
 	<?php } ?>
 	</table>
 
-	<br><br>
+	<br>
+	<br>
+	<br>
+
 			<div style="text-align:center; font-size:20px;o "><a href="../views/aboutus.html">About Us </a> | <a href="../views/teams.html" > Terms of Service</a> | <a href="../views/contact.html" > Contact Us</a></div>
-			<p align="center" > © Copyright 2021 | Job Provider | All right reversed</p>
-			
+			<p align="center" > © Copyright 2021 | Job Provider | All right reversed.</p>
+
+		</fieldset>
 		
 
-			
-		</fieldset>
+
+
+
 	</form>
 </div>
-
-	
 
 	
 </body>

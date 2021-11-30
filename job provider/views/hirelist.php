@@ -1,6 +1,6 @@
 <?php 
 
-	require_once('../model/jobModel.php');
+	require_once('../model/hireModel.php');
 	
 ?>
 
@@ -9,7 +9,7 @@
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta charset="utf-8">
-	<title>Job List</title>
+	<title>Hire List</title>
 	<style>
 
 a {
@@ -101,16 +101,16 @@ tr:hover {background-color: yellow;}
 <body>
 
 	<div style="text-align:center;">
-	<form method="post" action="../controller/jobcheck.php">
+	<form method="post" action="../controller/seekerscheck.php">
 		<fieldset>
 			<div class="header">
-      <h1>"JOB"</h1>
+      <h1>"HIRE LIST"</h1>
      
       </div>
 
       <div class="topnav">
             <a class="active" href="../views/home.php">HOME</a>
-             <a href="../views/seekerslist.php">JOB SEEKERS</a>
+            <a href="../views/seekerslist.php">JOB SEEKERS</a>
             <a href="../views/companyprofile.php">COMPANY</a>
             <a href="../views/joblist.php">JOB</a>
             <a href="../views/hirelist.php">HIRE</a>
@@ -120,9 +120,9 @@ tr:hover {background-color: yellow;}
       </div>
 
 			<div align="right" >
-      <a href="../views/companyprofile.php" class="previous round">&#8249;</a>
+      <a href="../views/joblist.php" class="previous round">&#8249;</a>
       <a href="../views/reviewlist.php" class="next round">&#8250;</a>
-      <a href="../views/joblist.php"><i class="fa fa-refresh" style="font-size:20px"></i></a>
+      <a href="../views/hirelist.php"><i class="fa fa-refresh" style="font-size:20px"></i></a>
       </div>
 
       <div align="center" >
@@ -133,7 +133,7 @@ tr:hover {background-color: yellow;}
 
 		
 	    </div>
-	    <script type="text/javascript" src="jobscript.js"></script>
+	    <script type="text/javascript" src="hire.js"></script>
 
 
 
@@ -142,10 +142,9 @@ tr:hover {background-color: yellow;}
 			<table border="1" align="center">
 		<tr align="center" style="background-color:#1abc9c " >
 			<th>ID</th>
-			<th>COMPANY NAME</th>
-			<th>JOB TITLE</th>
-			<th>SALARY</th>
-			<th>APPLY LAST DATE</th>
+			<th>NAME</th>
+			<th>ADDRESS</th>
+			<th>EMAIL</th>
 			<th>ACTION</th>
 		</tr>
 
@@ -153,16 +152,15 @@ tr:hover {background-color: yellow;}
 		$result = getAllUsers();
 		while ($user = mysqli_fetch_assoc($result)) { 
 	?>
-		<tr>
+		<tr align="center" style="background-color:#FFFFFF " >
 			<td><?=$user['id']?></td>
-			<td><?=$user['company_name']?></td>
-			<td><?=$user['job_title']?></td>
-			<td><?=$user['salary']?></td>
-			<td><?=$user['date']?></td>
+			<td><?=$user['name']?></td>
+			<td><?=$user['address']?></td>
+			<td><?=$user['email']?></td>
 			<td>
-				<a href="../views/addjob.php"> ADD</a> | 
-				<a href="editjob.php?id=<?=$user['id']?>"> EDIT</a> | 
-				<a href="deletejob.php?id=<?=$user['id']?>"> DELETE</a> 
+				<a href="../views/hire.html"> ADD</a> |
+				<a href="edithirelist.php?id=<?=$user['id']?>"> EDIT</a> | 
+				<a href="deletehirelist.php?id=<?=$user['id']?>"> DELETE</a> 
 			</td>
 		</tr>
 	<?php } ?>
