@@ -1,12 +1,6 @@
 <?php 
 	include('header.php');
-	//$result = getAllAdmins();
-	//$admin = mysqli_fetch_assoc($result);
-	//$id = $admin['id'];
-
 	$username = $_COOKIE['loggedInName'];
-
-	//$result = getAdminsByUserame();
 ?> 
 
 <!DOCTYPE html>
@@ -36,7 +30,7 @@
 	    <tr> <td> <a href="reviewlist.php"> Review Pannel</a> </td> </tr>
 	    <tr> <td> <a href="adminlist.php"> Admin Pannel</a> </td> </tr>
 	    <tr> <td> <a href="company.php"> Company</a> </td> </tr>
-	    <tr> <td> <a href="event.php"> Event Pannel</a> </td> </tr>
+	    <tr> <td> <a href="eventlist.php"> Event Pannel</a> </td> </tr>
 	    <tr> <td> <a href="jobproviderlist.php"> Job Provider Pannel</a> </td> </tr>
 	    <tr> <td> <a href="placementofficer.php"> Placement Officers</a> </td> </tr>
 	    <tr> <td> <a href="jobseeker.php"> Job Seeker</a> </td> </tr>
