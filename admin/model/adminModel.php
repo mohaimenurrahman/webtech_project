@@ -23,7 +23,7 @@
 		                                   '{$admin['password']}', 
 		                                   '{$admin['email']}',  
 		                                   '{$admin['gender']}',
-		                                   '{$admin['dob']}',
+		                                   '{$admin['dateofbirth']}',
 		                                   '{$admin['type']}'
 		                               )";
 		
