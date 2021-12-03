@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Event List</title>
+	<title>Jobseeker List</title>
 <body>	
 
      <center>
@@ -41,7 +41,7 @@
 			<td>
 				<a href="../views/event.php">ADD</a> |
 				<a href="jobseekeredit.php?id=<?=$user['id']?>">EDIT</a> | 
-				<a href="jobseekerdelete.php?id=<?=$user['id']?>">DELETE</a> 
+				<a href="../controller/jobseekerdelete.php?id=<?=$user['id']?>">DELETE</a> 
 			</td>
 		</tr>
 	<?php } ?>
