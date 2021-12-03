@@ -39,8 +39,6 @@
 			<td><?=$user['gender']?></td>
 			<td><?=$user['dateofbirth']?></td>
 			<td>
-				<a href="../views/event.php">ADD</a> |
-				<a href="jobseekeredit.php?id=<?=$user['id']?>">EDIT</a> | 
 				<a href="../controller/jobseekerdelete.php?id=<?=$user['id']?>">DELETE</a> 
 			</td>
 		</tr>
