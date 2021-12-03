@@ -6,26 +6,26 @@
 <body>
 
 
-       <form method="post" action="../controller/logincheck.php">
+       <form method="post" action="../controller/logincheck.php" onsubmit="return validateForm()">
        		<fieldset>
        			<legend>Login</legend>
        			<table>
        				<tr>
        					<td>Username:</td>
-       					<td><input type="text" name="username" value=""></td>
+       					<td><input type="text" id="user" name="username" value=""></td>
        				</tr>
        				<tr>
        					<td>Password:</td>
-       					<td><input type="password" name="password" value=""></td>
+       					<td><input type="password" id="pass" name="password" value=""></td>
        				</tr>
                                    
                                    <tr>
 				              <td>Type </td>
 					       <td>
-						       Admin<input type="radio" name="type" value="admin">
-						       Placement Officer<input type="radio" name="type" value="placementOfficer">
-						       Job Provider<input type="radio" name="type" value="jobProvider"> 
-						       Job Seeker<input type="radio" name="type" value="jobSeeker"> 
+						       Admin<input type="radio" id="ty" name="type" value="admin">
+						       Placement Officer<input type="radio" id="type" name="type" value="placementOfficer">
+						       Job Provider<input type="radio" id="type" name="type" value="jobProvider"> 
+						       Job Seeker<input type="radio" id="type" name="type" value="jobSeeker"> 
 				            </td> 
                                    </tr>	
 
@@ -37,7 +37,8 @@
        		</fieldset>
        	</form>
 
-
+	<script type="text/javascript" src="../asset/loginscript.js"></script>
 	
 </body>
+
 </html>
