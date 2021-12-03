@@ -33,7 +33,7 @@
 	    <tr> <td> <a href="eventlist.php"> Event Pannel</a> </td> </tr>
 	    <tr> <td> <a href="jobproviderlist.php"> Job Provider Pannel</a> </td> </tr>
 	    <tr> <td> <a href="placementofficer.php"> Placement Officers</a> </td> </tr>
-	    <tr> <td> <a href="jobseeker.php"> Job Seeker</a> </td> </tr>
+	    <tr> <td> <a href="jobseekerlist.php"> Job Seeker</a> </td> </tr>
         <tr> <td> <a href="setting.php"> Setting </a> </td> </tr>
 
 	</table>

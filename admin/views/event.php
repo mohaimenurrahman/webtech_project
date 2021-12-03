@@ -3,10 +3,10 @@
 ?>
 <html>
 <head>
-      <Title>Event</Title>
+     <Title>Event</Title>
+
 </head>
 <body>
-
 
      <center>
             <a href="../views/home.php">Back |</a>
@@ -14,24 +14,24 @@
             <a href="../controller/logout.php">Logout</a>
      </center>
   
-     <form method="post" action="../controller/eventcheck.php">
+     <form method="post" action="../controller/eventcheck.php" onsubmit="return validateForm()">
      
      <fieldset>
-          <legend>EVENT</legend>
+          <legend>Adding Event</legend>
                <table>
                      <tr>
                          <td>Event Name</td>
-                         <td><input type="text" name="name" value=""></td>
+                         <td><input type="text" id="namee" name="name" value=""></td>
                       </tr>
                       
                       <tr>
                           <td>Date</td>
-                          <td><input type="date" name="date" value=""><br></td>
+                          <td><input type="date" id="datee" name="date" value=""><br></td>
                       </tr>
        
                       <tr>
                           <td>Description</td>
-                          <td><textarea id="text" name="description"></textarea></td>
+                          <td><textarea id="descriptionn" name="description"></textarea></td>
                       </tr>
 
                       <tr>
@@ -42,6 +42,8 @@
       
     </fieldset>
     </form>
+
+    <script type="text/javascript" src="../asset/addeventscript.js"></script>
 
 </body>
 </html>
