@@ -6,46 +6,46 @@
 
 <body>
 
-	<form method="post" action="../controller/signupcheck.php" class="container">
+	<form method="post" action="../controller/signupcheck.php" onsubmit="return validateForm()" class="container">
 		<fieldset >
-			<legend>Signup</legend>
+			<legend id="10">Signup</legend>
 			<table>
 				<tr>
 					<td>Username:</td>
-					<td><input type="text" name="username" value=""></td>
+					<td><input type="text" id="usernamee" name="username" value=""></td>
 				</tr>
 				
 				<tr>
 					<td>Password:</td>
-					<td><input type="password" name="password" value=""></td>
+					<td><input type="password" id="passwordd" name="password" value=""></td>
 				</tr>
 				
 				<tr>
 					<td>Email:</td>
-					<td><input type="email" name="email" value=""></td>
+					<td><input type="email" id="emaill" name="email" value=""></td>
 				</tr>
 
-				<tr>
+				 <tr>
 				    <td>Gender </td>
 					<td>
-						Male<input type="radio" name="gender" value="Male">
-						Female<input type="radio" name="gender" value="Female">
-						Others<input type="radio" name="gender" value="Others"> 
+						Male<input type="radio" id="genderr" name="gender" value="Male">
+						Female<input type="radio" id="genderr" name="gender" value="Female">
+						Others<input type="radio" id="genderr" name="gender" value="Others"> 
 					</td> 
-                </tr>
+                </tr>	
 				
 				<tr>
 				    <td>Date Of Birth: </td>
-					<td><input type="date" name="dateofbirth" value=""> </td> 
-                </tr>		
+					<td><input type="date" id="dateofbirthh" name="dateofbirth" value=""> </td> 
+                </tr>	
 
                 <tr>
 				    <td>Type </td>
 					<td>
-						Admin<input type="radio" name="type" value="admin">
-						Placement Officer<input type="radio" name="type" value="placementOfficer">
-						Job Provider<input type="radio" name="type" value="jobProvider"> 
-						Job Seeker<input type="radio" name="type" value="jobSeeker"> 
+						Admin<input type="radio" id="typee" name="type" value="admin">
+						Placement Officer<input type="radio" id="typee" name="type" value="placementOfficer">
+						Job Provider<input type="radio" id="typee" name="type" value="jobProvider"> 
+						Job Seeker<input type="radio" id="typee" name="type" value="jobSeeker"> 
 					</td> 
                 </tr>			
 			
@@ -65,6 +65,8 @@
 		</fieldset>
 
 	</form>
+
+	<script type="text/javascript" src="../asset/signupscript.js"></script>
 
 </body>
 
