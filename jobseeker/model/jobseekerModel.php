@@ -1,7 +1,6 @@
 <?php 
 	require_once('db.php');
 
-
 	function validate($name, $password){
 		$con = getConnection();
 		$sql= "select * from jobseeker where name='{$name}' and password='{$password}'";
@@ -36,14 +35,14 @@
 
 	function getAllUsers(){
 		$con = getConnection();
-		$sql= "select * from users";
+		$sql= "select * from jobseeker";
 		$result = mysqli_query($con, $sql);
 		return $result;
 	}
 
 	function getUsersById($id){
 		$con = getConnection();
-		$sql= "select * from users where id={$id}";
+		$sql= "select * from jobseeker where id={$id}";
 		$result = mysqli_query($con, $sql);
 		$user = mysqli_fetch_assoc($result);
 		return $user;
@@ -51,7 +50,11 @@
 
 	function editUser($user){
 		$con = getConnection();
-		$sql= "update users set username='{$user['username']}', password='{$user['password']}', email='{$user['email']}' where id={$user['id']}";
+		$sql= "update job set company_name='{$user['company_name']}', 
+									job_title='{$user['job_title']}', 
+									salary='{$user['salary']}',
+									date='{$user['date']}'
+									where id={$user['id']}";
 		
 		if(mysqli_query($con, $sql)){
 			return true;
@@ -62,7 +65,7 @@
 
 	function deleteUser($id){
 		$con = getConnection();
-		$sql= "delete from users where id={$id}";
+		$sql= "delete from job where id={$id}";
 		
 		if(mysqli_query($con, $sql)){
 			return true;
@@ -70,5 +73,4 @@
 			return false;
 		}
 	}
-
 ?>

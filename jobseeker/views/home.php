@@ -17,7 +17,7 @@
 
 		<a href="../views/home.php">HomePage</a> <br>
 		<a href="../views/signup.html"> Create New Account</a> <br>
-	    <a href="../views/job_list.html"> Job List</a> <br>
+	    <a href="../views/joblist.php"> Job List</a> <br>
 		<a href="../controller/logout.php"> Logout</a> <br>
 		</center>
     </body>
