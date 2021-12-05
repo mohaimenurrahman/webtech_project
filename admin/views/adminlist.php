@@ -18,6 +18,17 @@
         <a href="../controller/logout.php"> Log Out</a>
     </center>
     <br><br><br> 
+
+    <center>
+        <input type="text" id="d1" name="username" value="" onkeyup="ajax()" />
+          <input type="button" name="click" value="Search" onclick="ajax()" />
+     </center>
+
+     <div id="d2" align="right" width="500">
+        
+     </div>
+
+     <br><br><br>
  
     <table border="1" align="center">
         <tr>
@@ -45,6 +56,6 @@
         
     </table>
 
-     <script type="text/javascript" src="script.js"></script>
+     <script type="text/javascript" src="../asset/adminscript.js"></script>
 </body>
 </html>
