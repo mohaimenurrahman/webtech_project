@@ -20,6 +20,17 @@
 
      <br><br><br>
 
+     <center>
+        <input type="text" id="d1" name="name" value="" onkeyup="ajax()" />
+          <input type="button" name="click" value="Search" onclick="ajax()" />
+     </center>
+
+     <div id="d2" align="right" width="500">
+        
+     </div>
+
+     <br><br><br> <br>
+
 	<form>
 			<table border="1" align="center">
 		  <tr align="center">
@@ -42,5 +53,8 @@
 	<?php } ?>
 	</table>
 	</form>
+
+	 <script type="text/javascript" src="../asset/jobproviderscript.js"></script>
+
 </body>
 </html>
