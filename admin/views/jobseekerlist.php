@@ -16,9 +16,18 @@
             <a href="../controller/logout.php">Logout</a>
      </center>
      
-     <br>
-     <br>
-     <br>
+    <br><br><br> 
+
+     <center>
+        <input type="text" id="d1" name="name" value="" onkeyup="ajax()" />
+          <input type="button" name="click" value="Search" onclick="ajax()" />
+     </center>
+
+     <div id="d2" align="right" width="500">
+        
+     </div>
+
+     <br><br><br> <br><br>
 
 		<table border="1" align="center">
 		<tr align="center">
@@ -47,5 +56,7 @@
 			
 		</fieldset>
 	</form>
+
+	<script type="text/javascript" src="../asset/jobseekerscript.js"></script>
 </body>
 </html>
