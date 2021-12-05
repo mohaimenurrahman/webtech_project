@@ -4,7 +4,8 @@
 
 	function addUser($user){
 		$con = getConnection();
-		$sql= "insert into job values('','{$user['company_name']}', '{$user['job_title']}', '{$user['salary']}', '{$user['date']}')";
+		$sql= "insert into job values('','{$user['company_name']}', 
+		'{$user['job_title']}', '{$user['salary']}', '{$user['date']}')";
 		
 		if(mysqli_query($con, $sql)){
 			return true;
@@ -30,7 +31,8 @@
 
 	function editUser($user){
 		$con = getConnection();
-		$sql= "update job set company_name='{$user['company_name']}', job_title='{$user['job_title']}',salary='{$user['salary']}', date='{$user['date']}' where id={$user['id']}";
+		$sql= "update job set company_name='{$user['company_name']}',
+		 job_title='{$user['job_title']}',salary='{$user['salary']}', date='{$user['date']}' where id={$user['id']}";
 		
 		if(mysqli_query($con, $sql)){
 			return true;

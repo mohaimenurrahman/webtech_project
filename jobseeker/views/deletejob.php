@@ -4,7 +4,7 @@
 	$id = $_REQUEST['id'];
 
 	
-	$status = deleteJob($id);
+	$status = deleteUser($id);
 	
 	if($status){
 		header('location: ../views/joblist.php');

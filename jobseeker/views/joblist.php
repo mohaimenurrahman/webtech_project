@@ -29,13 +29,13 @@
 		while ($data = mysqli_fetch_assoc($result)) {			
 	?>
 		<tr>
-		    <td><?=$data['id']?></td>
 			<td><?=$data['company_name']?></td>
 			<td><?=$data['job_title']?></td>
 			<td><?=$data['salary']?></td>
 			<td><?=$data['date']?></td>
 			<td>
 			    <a href="../views/addjob.html"> ADD</a> | 
+				<a href="../views/applyjob.php"> APPLY</a> |
 				<a href="editjob.php?id=<?=$data['id']?>"> EDIT</a> | 
 				<a href="deletejob.php?id=<?=$data['id']?>"> DELETE</a> 
 			</td>

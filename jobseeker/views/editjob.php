@@ -39,16 +39,6 @@
 				</tr>
 				
 				<tr>
-				    <td><input type="checkbox" name="" value=""></td>
-				    <td> Display</td>
-				</tr>
-				
-				<tr>
-				    <td> <hr> </td>
-					<td> </td>
-				</tr>
-				
-				<tr>
 					<td><input type="hidden" name="id" value="<?=$data['id']?>"></td>
 					<td><input type="submit" name="submit" value="Update"></td>
 				</tr>

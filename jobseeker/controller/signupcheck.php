@@ -68,28 +68,3 @@
 ?>
 
 
-
-
-
-
-
-
-
-
-
-$jobseeker= [
-										'username'=>$username, 
-										'password'=>$password, 
-										'gender'=>$gender, 
-										'address'=>$address, 
-										'email'=>$email, 
-										'mobile'=>$mobile 
-									    ];
-
-							        $status = addJobseeker($jobseeker);
-
-							        if($status){
-									    header('location: ../views/login.html');
-				                    }else{
-								         echo "try again...";
-								    }     
