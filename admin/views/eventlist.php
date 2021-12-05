@@ -20,13 +20,31 @@
      <br>
      <br>
 
-		<table border="1" align="center">
-		<tr align="center">
-			<th>Event Name</th>
-			<th>Date</th>
-			<th>Description</th>
-			<th>Action</th>
-		</tr>
+     <center>
+     	<input type="text" id="d1" name="name" value="" onkeyup="ajax()" />
+          <input type="button" name="click" value="Search" onclick="ajax()" />
+     </center>
+
+         
+     <div id="d2" align="right" width="500">
+     	
+     </div>
+     
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+
+
+	<table border="1" align="center">
+	<tr align="center">
+		<th>Event Name</th>
+		<th>Date</th>
+		<th>Description</th>
+		<th>Action</th>
+	</tr>
 
 	<?php  
 		$result = getAllUsers();
@@ -47,5 +65,8 @@
 			
 		</fieldset>
 	</form>
+
+	<script type="text/javascript" src="../asset/eventscript.js"></script>
+
 </body>
 </html>
