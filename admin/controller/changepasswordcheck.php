@@ -3,7 +3,7 @@ session_start();
 require_once('../model/adminModel.php');
 
 if (isset($_POST['submit'])) {
-    //$name = $_COOKIE['loggedInName'];
+    $name = $_COOKIE['loggedInName'];
     //$id = $_COOKIE['loggedInId'];
 	
 	$username = $_COOKIE['loggedInName'];
@@ -18,12 +18,14 @@ if (isset($_POST['submit'])) {
                 echo $currentPassword;
                 echo $newPassword;
                 echo $currentPassword;
+
+                $status = passwordChange($username, $newPassword);
                     
-                // if($status){
-                //     header('location: ../views/profile.php');
-                // }else{
-                //    echo "Does not change";
-                // }
+                if($status){
+                     header('location: ../views/profile.php');
+                }else{
+                    echo "Does not change";
+                }
             }else {
                 echo "New Password and Confirm Password do not match";
             }
