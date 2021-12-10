@@ -5,6 +5,7 @@
 	$email 		= $_REQUEST['email'];
 	$dateofbirth = $_REQUEST['dateofbirth'];
 	$gender = $_REQUEST['gender'];
+	$profilepic = $_REQUEST['profilepic'];
 
 
 	$con = mysqli_connect('localhost', 'root', '', 'webtech');
@@ -14,6 +15,7 @@
 
 	$id = $data['id'];
 
+
 	$user = ['username'=>$username,'email'=>$email, 'dateofbirth'=>$dateofbirth, 'gender'=>$gender];
 	$status = editAdmin($user);
 
@@ -22,5 +24,8 @@
 	}else{
 		header('location: ../editProfile.php?id='.$id);
 	}
+
+
+
 
 ?>

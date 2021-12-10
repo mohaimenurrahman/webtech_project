@@ -11,13 +11,6 @@
 	$result = mysqli_query($con, $sql);
 	$user = mysqli_fetch_assoc($result);
 
-	//print_r($result);
-	//print_r($user);
-
-
-	//<img src="../asset/upload/<?=$_SESSION['profile'] 
-
-
 ?>         
             <table align="center">
 	            <tr> 
@@ -43,6 +36,7 @@
                     <td><?php echo $_COOKIE['loggedInName'] ?></td>
 				    <td rowspan="5">
 				    	<img src="a2.jpg" height="150" width="150"/>	
+				    	<a href="changeprofilepicture.html">Upload Pic </a>
 				    </td>
                </tr>
                

@@ -75,10 +75,9 @@
 	}
 
 
-	function passwordChange($user){
+	function passwordChange($password, $username){
 		$con = getConnection();
-		$sql= "update admin set password='{$user['password']}' where username={$user['username']}";
-		
+		$sql= "update admin set password={$password} where username={$username}";
 		if(mysqli_query($con, $sql)){
 			return true;
 		}else{

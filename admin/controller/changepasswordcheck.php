@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../model/adminModel.php');
 
 if (isset($_POST['submit'])) {
     //$name = $_COOKIE['loggedInName'];
@@ -13,16 +14,16 @@ if (isset($_POST['submit'])) {
     if ($currentPassword != "") {
         if ($newPassword != "") {
             if ($newPassword == $confirmNewPassword) {
-                $validInfo = false;
-                
-                    $user = ['password'=>$newPassword];
-                    $status = passwordChange($user);
 
-                    if($status){
-                        header('location: ../views/profile.php');
-                    }else{
-                       echo "Does not change";
-                    }
+                echo $currentPassword;
+                echo $newPassword;
+                echo $currentPassword;
+                    
+                // if($status){
+                //     header('location: ../views/profile.php');
+                // }else{
+                //    echo "Does not change";
+                // }
             }else {
                 echo "New Password and Confirm Password do not match";
             }

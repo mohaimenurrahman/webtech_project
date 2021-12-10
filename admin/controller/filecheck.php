@@ -2,16 +2,14 @@
 	
 	session_start();
 
-	$des = "../asset/upload/".$_FILES['myfile']['name'];
-	$src = $_FILES['myfile']['tmp_name'];
+	if(isset($_POST['submit'])){
 
-	if(move_uploaded_file($src, $des)){
-		//echo "Done";
-		$_SESSION['profile'] = $_FILES['myfile']['name'];
-		header('location:../views/profile.php');
-	}else{
-		echo "Error";
+		$des = $_FILES['myfile']['name'];
+	    $src = $_FILES['myfile']['tmp_name'];
+	    if(move_uploaded_file($src, "../asset/".$des)){
+	    	header('location: ../views/successfullupload.php'); 
+	    }else{
+	    	echo "Try again";
+	    }
 	}
-
 ?>
-
