@@ -1,33 +1,42 @@
 <?php
 	session_start();
-	require_once('../model/usersModel.php');
+
+	require_once('../model/adminModel.php');
 
 	if(isset($_POST['submit'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		$type = $_POST['type'];
+
+		//$admin = getAdminsByUserName($username);
+
 
 		if($username != ""){
 			if($password != ""){
-				/*$myfile = fopen('../model/user.txt', 'r');
+				if($_POST['type']!= ""){
+					$status = validate($username, $password);
+				    if($status){
+				        if($type == "jobProvider"){
+				            
+				            setcookie('flag', 'true', time()+3600, '/');
+				            setcookie('loggedInName',$username,time()+3600,'/');
+                            setcookie('loggedInPassword',$password,time()+3600,'/');
 
-				while (!feof($myfile)) {
-					$data = fgets($myfile);
-					$user = explode('|', $data);
-					if(trim($user[0]) == $username && trim($user[1]) == $password){
-						setcookie('flag', 'true', time()+3600, '/');
-						header('location: ../views/home.php');
-					}
-				}*/
+				            header('location:../views/home.php');
 
-				$status = validate($username, $password);
-				
-				if($status){
-					setcookie('flag', 'true', time()+3600, '/');
-					header('location: ../views/home.php');
+				        }else if($_POST['type'] == "placementOfficer"){
+
+					    }else if($_POST['type'] == "admin"){
+
+					    }else{
+
+					    }
+				    }else{
+					    echo "invalid username/password";
+					}    
 				}else{
-					echo "invalid username/password";
-				}
-
+					echo "Missing Type";
+				}  
 			}else{
 				echo "Invalid password...";
 			}
