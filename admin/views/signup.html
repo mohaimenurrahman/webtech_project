@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Signup Page</title>
+	<link href="../asset/adminsignup.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<form method="post" action="../controller/signupcheck.php" onsubmit="return validateForm()" class="container">
+		<fieldset >
+			<legend id="10">Signup</legend>
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td><input type="text" id="usernamee" name="username" value=""></td>
+				</tr>
+				
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" id="passwordd" name="password" value=""></td>
+				</tr>
+				
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" id="emaill" name="email" value=""></td>
+				</tr>
+
+				 <tr>
+				    <td>Gender </td>
+					<td>
+						Male<input type="radio" id="genderr" name="gender" value="Male">
+						Female<input type="radio" id="genderr" name="gender" value="Female">
+						Others<input type="radio" id="genderr" name="gender" value="Others"> 
+					</td> 
+                </tr>	
+				
+				<tr>
+				    <td>Date Of Birth: </td>
+					<td><input type="date" id="dateofbirthh" name="dateofbirth" value=""> </td> 
+                </tr>	
+
+                <tr>
+				    <td>Type </td>
+					<td>
+						Admin<input type="radio" id="typee" name="type" value="admin">
+						Placement Officer<input type="radio" id="typee" name="type" value="placementOfficer">
+						Job Provider<input type="radio" id="typee" name="type" value="jobProvider"> 
+						Job Seeker<input type="radio" id="typee" name="type" value="jobSeeker"> 
+					</td> 
+                </tr>			
+			
+				
+				<tr>
+					<td><input type="reset" name="" value="Reset"></td>
+					<td><input type="submit" name="submit" value="Submit"></td>
+				</tr>
+
+				<tr>
+					<td> <a href="login.html">Login</a> </td>
+					<td> </td>
+				</tr>
+
+			</table>
+
+		</fieldset>
+
+	</form>
+
+	<script type="text/javascript" src="../asset/signupscript.js"></script>
+
+</body>
+
+</html>
