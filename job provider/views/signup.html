@@ -1,102 +1,130 @@
-<!DOCTYPE html>
 <html>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+<head>
+	<title>Signup Page</title>
+	<style>
+fieldset {
+  background-color: #eeeeee;
+  width:100px ;
+  text-align:center;
+ 
 }
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
+legend {
+  background-color: gray;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+  padding: 5px 10px;
+  width:80px;
 
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
+input {
+  margin: 10px;
+  width: 300px;
 }
 </style>
+
+    <script>
+        
+        function validateForm() {
+            
+            var username = document.getElementById("usernamee").value;
+            var password = document.getElementById("passwordd").value;
+            var email = document.getElementById("emaill").value;
+            var gender = document.getElementById("genderr").value;
+            var dateofbirth = document.getElementById("dateofbirthh").value;
+            var type = document.getElementById("typee").value;
+            
+            if (username == "") {
+                alert("Username must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (gender == "") {
+                alert("Gender must be filled out");
+                return false;
+            }
+            if (dateofbirth == "") {
+                alert("DateOfBirth must be filled out");
+                return false;
+            }
+            if (type == "") {
+                alert("Type must be filled out");
+                return false;
+            }
+            
+        }
+    </script>
+
+</head>
+
 <body>
 
-<form method="post" action="../controller/signupcheck.php" style="border:1px solid #ccc">
-  <div class="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
+	<form method="post" action="../controller/signupcheck.php" onsubmit="return validateForm()" class="container">
+		<fieldset >
+			<legend id="10">Signup</legend>
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td><input type="text" id="usernamee" placeholder="Enter username" name="username" value=""></td>
+				</tr>
+				
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" id="passwordd" placeholder="Enter password" name="password" value=""></td>
+				</tr>
+				
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" id="emaill" placeholder="Enter email" name="email" value=""></td>
+				</tr>
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter username" name="username" required>
+				 <tr>
+				    <td>Gender </td>
+					<td>
+						<input type="radio" id="genderr" name="gender" value="Male">Male
+						<input type="radio" id="genderr" name="gender" value="Female">Female
+						<input type="radio" id="genderr" name="gender" value="Others">Others
+					</td> 
+                </tr>
+				
+				<tr>
+				    <td>Date Of Birth: </td>
+					<td><input type="date" id="dateofbirthh" name="dateofbirth" value=""> </td> 
+                </tr>	
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+                <tr>
+				    <td>Type </td>
+					<td>
+						<input type="radio" id="typee" name="type" value="admin">Admin
+						<input type="radio" id="typee" name="type" value="placementOfficer">Placement Officer
+						<input type="radio" id="typee" name="type" value="jobProvider">Job Provider 
+						<input type="radio" id="typee" name="type" value="jobSeeker">Job Seeker
+					</td> 
+                </tr>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-    
-    <p>Already an account - <a href="../views/login.html" style="color:dodgerblue">Login</a>.</p>
+				<tr>
+					<td><input type="reset" name="" value="Reset"></td>
+					<td><input type="submit" name="submit" value="Submit"></td>
+				</tr>
 
-    <div class="clearfix" >
-     
-      <button  type="submit" name = "submit" class="signupbtn">Sign Up</button>
-    </div>
-  </div>
-</form>
+				<tr>
+					<td>Already an account: <a href="../views/login.html"> Login</a> </td>
+					<td> </td>
+				</tr>
+
+			</table>
+
+		</fieldset>
+
+	</form>
 
 </body>
+
 </html>
