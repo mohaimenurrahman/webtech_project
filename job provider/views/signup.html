@@ -1,0 +1,130 @@
+<html>
+<head>
+	<title>Signup Page</title>
+	<style>
+fieldset {
+  background-color: #eeeeee;
+  width:100px ;
+  text-align:center;
+ 
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  width:80px;
+
+}
+
+input {
+  margin: 10px;
+  width: 300px;
+}
+</style>
+
+    <script>
+        
+        function validateForm() {
+            
+            var username = document.getElementById("usernamee").value;
+            var password = document.getElementById("passwordd").value;
+            var email = document.getElementById("emaill").value;
+            var gender = document.getElementById("genderr").value;
+            var dateofbirth = document.getElementById("dateofbirthh").value;
+            var type = document.getElementById("typee").value;
+            
+            if (username == "") {
+                alert("Username must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (gender == "") {
+                alert("Gender must be filled out");
+                return false;
+            }
+            if (dateofbirth == "") {
+                alert("DateOfBirth must be filled out");
+                return false;
+            }
+            if (type == "") {
+                alert("Type must be filled out");
+                return false;
+            }
+            
+        }
+    </script>
+
+</head>
+
+<body>
+
+	<form method="post" action="../controller/signupcheck.php" onsubmit="return validateForm()" class="container">
+		<fieldset >
+			<legend id="10">Signup</legend>
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td><input type="text" id="usernamee" placeholder="Enter username" name="username" value=""></td>
+				</tr>
+				
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" id="passwordd" placeholder="Enter password" name="password" value=""></td>
+				</tr>
+				
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" id="emaill" placeholder="Enter email" name="email" value=""></td>
+				</tr>
+
+				 <tr>
+				    <td>Gender </td>
+					<td>
+						<input type="radio" id="genderr" name="gender" value="Male">Male
+						<input type="radio" id="genderr" name="gender" value="Female">Female
+						<input type="radio" id="genderr" name="gender" value="Others">Others
+					</td> 
+                </tr>
+				
+				<tr>
+				    <td>Date Of Birth: </td>
+					<td><input type="date" id="dateofbirthh" name="dateofbirth" value=""> </td> 
+                </tr>	
+
+                <tr>
+				    <td>Type </td>
+					<td>
+						<input type="radio" id="typee" name="type" value="admin">Admin
+						<input type="radio" id="typee" name="type" value="placementOfficer">Placement Officer
+						<input type="radio" id="typee" name="type" value="jobProvider">Job Provider 
+						<input type="radio" id="typee" name="type" value="jobSeeker">Job Seeker
+					</td> 
+                </tr>
+
+				<tr>
+					<td><input type="reset" name="" value="Reset"></td>
+					<td><input type="submit" name="submit" value="Submit"></td>
+				</tr>
+
+				<tr>
+					<td>Already an account: <a href="../views/login.html"> Login</a> </td>
+					<td> </td>
+				</tr>
+
+			</table>
+
+		</fieldset>
+
+	</form>
+
+</body>
+
+</html>
