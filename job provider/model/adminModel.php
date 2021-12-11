@@ -4,7 +4,7 @@
 
 	function validate($username, $password){
 		$con = getConnection();
-		$sql= "select * from provider where username='{$username}' and password='{$password}'";
+		$sql= "select * from jobprovider where username='{$username}' and password='{$password}'";
 		$result = mysqli_query($con, $sql);
 		$admin = mysqli_fetch_assoc($result);
 
@@ -17,7 +17,7 @@
 
 	function addAdmin($admin){
 		$con = getConnection();
-		$sql= "insert into provider values(
+		$sql= "insert into jobprovider values(
 		                                   '',
 		                                   '{$admin['username']}', 
 		                                   '{$admin['password']}', 
@@ -36,7 +36,7 @@
 
 	function getAdminsById($id){
 		$con = getConnection();
-		$sql= "select * from provider where id={$id}";
+		$sql= "select * from jobprovider where id={$id}";
 		$result = mysqli_query($con, $sql);
 		$user = mysqli_fetch_assoc($result);
 		return $user;
@@ -44,8 +44,7 @@
 
 	function getAdminsByUserName($username){
 		$con = getConnection();
-		//$sql= "select * from admin where username={$username}";
-		$sql="SELECT * FROM provider WHERE username = {$username}";
+		$sql="SELECT * FROM jobprovider WHERE username = {$username}";
 		$result = mysqli_query($con, $sql);
 		$user = mysqli_fetch_assoc($result);
 		return $user;
@@ -53,7 +52,7 @@
 
 	function getAllAdmins(){
 		$con = getConnection();
-		$sql= "select * from provider";
+		$sql= "select * from jobprovider";
 		$result = mysqli_query($con, $sql);
 		return $result;
 	}
@@ -61,7 +60,7 @@
 
 	function editAdmin($user){
 		$con = getConnection();
-		$sql= "update provider set username='{$user['username']}', 
+		$sql= "update jobprovider set username='{$user['username']}', 
 		                      email='{$user['email']}' , 
 		                      dateofbirth='{$user['dateofbirth']}' , 
 		                      gender='{$user['gender']}' 
@@ -77,7 +76,7 @@
 
 	function passwordChange($user){
 		$con = getConnection();
-		$sql= "update provider set password='{$user['password']}' where username={$user['username']}";
+		$sql= "update jobprovider set password='{$user['password']}' where username={$user['username']}";
 		
 		if(mysqli_query($con, $sql)){
 			return true;
