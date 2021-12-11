@@ -1,47 +1,67 @@
 <?php
 	session_start();
-	require_once('../model/usersModel.php');
+
+	require_once('../model/adminModel.php');
 
 	if(isset($_POST['submit'])){
-
-		$username 	= $_POST['username'];
-		$password 	= $_POST['password'];
-		$email 		= $_POST['email'];
-
+		
+		$username=$_POST['username'];
+		$password=$_POST['password'];
+		$email=$_POST['email'];
+		$dateofbirth=$_POST['dateofbirth'];
+		$gender=$_POST['gender'];
+		$type=$_POST['type'];
+		
 		if($_POST['username'] != ""){
-			if($_POST['password'] != ""){
 				if($_POST['email'] != ""){
+					if($_POST['gender'] != ""){
+						if($_POST['dateofbirth'] != ""){ 
+							if($_POST['type']!= ""){
+								if($type == "jobProvider"){
+									
+									$provider = [
+				            	        'username'=>$username, 
+				            	        'password'=>$password, 
+				            	        'email'=>$email, 
+				            	        'gender'=>$gender,
+				            	        'dateofbirth'=>$dateofbirth,
+				            	        'type'=>$type, 
+				            	    ];
 
-					/*$myfile = fopen('../model/user.txt', 'a');
-					$user = $_POST['username']."|".$_POST['password']."|".$_POST['email']."\r\n";
+  
+				                    $status = addAdmin($provider);	
+				                    if($status){
+                                        header('location:../views/login.html');
+				                    }else{
+				            	        echo "Try again";
+				                    }
 
-					fwrite($myfile, $user);
-					fclose($myfile);*/
+								}else if($_POST['type'] == "placementOfficer"){
 
-					$user = [
-								'username'=> $username, 
-								'password'=>$password, 
-								'email'=> $email, 
-								'type'=>'user'
-							];
-							
-					$status = addUser($user);
+								}else if($_POST['type'] == "admin"){
 
-					if($status){
-						header('location: ../views/login.html');
+								}else{
+
+								}
+								 
+							}else{
+								echo " Missing type..."; 
+							}
+
+						}else{
+                             echo " Select gender..."; 
+						}
 					}else{
-						echo "try again...";
+					    echo "Invalid date of birth..."; 	
 					}
 					
-
 				}else{
 					echo "Invalid email...";
 				}	
-			}else{
-				echo "Invalid password...";
-			}
+				
 		}else{
 			echo "Invalid username...";
 		}
+		
 	}
 ?>
