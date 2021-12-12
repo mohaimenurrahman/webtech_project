@@ -1,4 +1,3 @@
-companysearch.php
 <?php 
 
 	$search = $_REQUEST['d1'];
@@ -13,6 +12,9 @@ companysearch.php
 				    <td>Id</td>
 					<td>Name</td>
 					<td>Email</td>
+					<td>Gender</td>
+					<td>DateOfBirth</td>
+					<td>Type</td>
 				</tr>";
 
 	while ($row = mysqli_fetch_assoc($result)) {
@@ -20,6 +22,9 @@ companysearch.php
 		                <td>{$row['id']}</td>
 						<td>{$row['username']}</td>
 						<td>{$row['email']}</td>
+						<td>{$row['gender']}</td>
+						<td>{$row['dateofbirth']}</td>
+						<td>{$row['type']}</td>
 					</tr>";
 	}
 

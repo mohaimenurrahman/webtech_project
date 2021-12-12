@@ -36,6 +36,9 @@
 		  <tr align="center">
 			<th>Name</th>
 			<th>Email</th>
+			<th>Gender</th>
+			<th>DateOfBirth</th>
+			<th>Type</th>
 			<th>Action</th>
 		</tr>
 
@@ -46,6 +49,9 @@
 		<tr>
 			<td><?=$user['username']?></td>
 			<td><?=$user['email']?></td>
+			<td><?=$user['gender']?></td>
+			<td><?=$user['dateofbirth']?></td>
+			<td><?=$user['type']?></td>
 			<td>
 				<a href="jobproviderdelete.php?id=<?=$user['id']?>"> DELETE</a> 
 			</td>
