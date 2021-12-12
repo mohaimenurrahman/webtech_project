@@ -24,6 +24,18 @@
     </center>
 
     <br><br><br> 
+
+    <center>
+        <input type="text" id="d1" name="name" placeholder="Search By Name" value="" onkeyup="ajax()" />
+          <input type="button" name="click" value="Search" onclick="ajax()" />
+     </center>
+
+         
+     <div id="d2" align="right" width="500">
+        
+     </div>
+     
+     <br>
  
     <table border="1" align="center">
         <tr>
@@ -53,6 +65,6 @@
         
     </table>
 
-     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="../asset/placementofficerscript.js"></script>
 </body>
 </html>
