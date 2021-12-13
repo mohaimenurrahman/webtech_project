@@ -16,10 +16,11 @@
 	</table>
 	<br>
 	<br>
-
+	<center>
 	<form method="POST" action="../controller/filecheck.php" enctype="multipart/form-data">
 		<input type="file" name="myfile" value=""> CV 
 		<input type="submit" name="submit" value="Submit">
 	</form>
+	</center>
 </body>
 </html>

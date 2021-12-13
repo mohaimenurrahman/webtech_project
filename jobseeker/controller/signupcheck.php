@@ -36,7 +36,7 @@
 							             $status = addUser($jobseeker);
 
 							             if($status){
-									          header('location: ../views/login.html');
+									          header('location: ../views/login.php');
 				                         }else{
 								             echo "try again...";
 								         }  

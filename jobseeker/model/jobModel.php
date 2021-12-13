@@ -1,7 +1,6 @@
 <?php 
 	require_once('db.php');
 
-
 	function addUser($user){
 		$con = getConnection();
 		$sql= "insert into job values('','{$user['company_name']}', 

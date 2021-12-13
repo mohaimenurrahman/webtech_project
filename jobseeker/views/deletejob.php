@@ -2,7 +2,6 @@
 	require_once('../model/jobModel.php');
 
 	$id = $_REQUEST['id'];
-
 	
 	$status = deleteUser($id);
 	
