@@ -12,7 +12,7 @@
 		</center> 
         <br>
 
-		<h2 align="center"> CV is uplaoded successfully </h2>
+		<h2 align="center"> Uplaoded successfully </h2>
 		<br>
 </body>	
 </html>

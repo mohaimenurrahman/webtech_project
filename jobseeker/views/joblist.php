@@ -10,6 +10,11 @@
 </head>
 <body>
     <center>
+		<th> 
+			<a href="home.php"> Back |</a> 
+			<a href="home.php"> Home |</a> 
+			<a href="../controller/logout.php"> Logout</a>
+		</th> 
 	   <form action="" method="post">
 	        <input type="text" name="search_name" placeholder="search by job name">
 	        <input type="submit" name="search" value="Search">

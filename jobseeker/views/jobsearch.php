@@ -1,11 +1,8 @@
 <?php 
-
 	$search = $_REQUEST['name'];
-   
 	$con = mysqli_connect('localhost', 'root', '', 'webtech');
 	$sql= "select * from job where company_name like '%{$search}%'";
 	$result = mysqli_query($con, $sql);
-
 
 	$data = "<table border=1>
 				<tr>
@@ -25,7 +22,6 @@
 						<td>{$row['date']}</td>
 					</tr>";
 	}
-
 	$data .= "</table>";
 	echo $data;
 ?>

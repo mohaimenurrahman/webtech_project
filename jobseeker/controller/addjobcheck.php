@@ -10,7 +10,6 @@
 		$salary = $_POST['salary'];
         $date = $_POST['date'];
 
- 
 		if($_POST['company_name'] != ""){
 			if($_POST['job_title'] != ""){
 				if($_POST['salary'] != ""){

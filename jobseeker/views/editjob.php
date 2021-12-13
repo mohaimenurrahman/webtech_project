@@ -6,11 +6,11 @@
 ?>
 
 <html>
-<head>
-	<title>Edit Job</title>
-</head>
+	<head>
+		<title>Edit Job</title>
+	</head>
+
 <body>
-	
 	<form method="post" action="../controller/editcheck.php">
 		<fieldset>
 			<legend>Edit Job</legend>
